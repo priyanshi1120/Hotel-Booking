@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Block from './components/Block';
+import Navbar from './components/Navbar';
+import  "./App.css";
+import styles from "./css.module.css";
+import {Slider } from "./components/Slider";
+import { Carousel } from './components/Craousel';
+import Flighthome from './components/Flighthome';
+import { Bookingcss } from './components/Bookingcss';
+import { Icondiv } from './components/Icondiv';
+import { Fromto } from './components/Fromto';
+import { Fare } from './components/Fare';
+import { Wrap } from './components/Wrap';
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Wrap>
+        {/* <Icondiv className="icondiv"></Icondiv> */}
+        <br />
+        <br />
+        <Bookingcss>
+          <br />
+
+          <Fromto />
+          <Fare />
+        </Bookingcss>
+        <div className="button">
+          <button>SEARCH</button>
+        </div>
+      </Wrap>
+      <Block />
+      <div className={styles.container} style={{ boxSizing: "border-box" }}>
+        <Slider />
+        <div style={{ marginTop: 50 }}>
+          <Carousel />
+        </div>
+      </div>
     </div>
   );
 }
