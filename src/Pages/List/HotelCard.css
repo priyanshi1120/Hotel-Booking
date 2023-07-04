@@ -1,0 +1,37 @@
+.hotel-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .card-header {
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .card-photos {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .card-photos img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .card-info {
+    flex: 1;
+  }
+  
+  .card-footer {
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  

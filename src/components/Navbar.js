@@ -11,29 +11,23 @@ import DownhillSkiingIcon from "@mui/icons-material/DownhillSkiing";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import Image1  from "../assest/img1.png";
-
+import Image1 from "../assest/img1.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-
 
   return (
     <>
       <nav className={styles.navbarWrapper}>
         <div className={styles.navbarContent}>
-         
           <div className={styles.leftSideNavbar}>
-           
             <div className={styles.logoWrapper}>
               <a href="/" className={styles.logoimg}>
-                <img
-                  src={Image1}
-                  alt="Logo"
-                />
+                <img src={Image1} alt="Logo" />
               </a>
             </div>
-         
+
             <div
               className={styles.hamburgr_menu}
               onClick={() => setOpen(!open)}
@@ -51,18 +45,22 @@ const Navbar = () => {
             }
           >
             <div className={styles.iconWrapper}>
-              <div >
+              <div>
                 <span>
+                <Link to={'/'}>
                   <FlightIcon
                     className={styles.flightICON}
                     style={{ fontSize: 30, padding: 4 }}
                   ></FlightIcon>
+                  </Link>
                 </span>
                 <p style={{ marginTop: "0px" }}>Flights</p>
               </div>
-              <div >
+              <div>
                 <span>
-                  <HotelIcon style={{ fontSize: 30, padding: 4 }}></HotelIcon>
+                  <Link to={`/hotel`}>
+                    <HotelIcon style={{ fontSize: 30, padding: 4 }}></HotelIcon>
+                  </Link>
                 </span>
                 <p style={{ marginTop: "0px" }}>Hotels</p>
               </div>

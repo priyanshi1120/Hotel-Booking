@@ -1,43 +1,25 @@
 
-import Block from './components/Block';
-import Navbar from './components/Navbar';
-import  "./App.css";
-import styles from "./css.module.css";
-import {Slider } from "./components/Slider";
-import { Carousel } from './components/Craousel';
-import Flighthome from './components/Flighthome';
-import { Bookingcss } from './components/Bookingcss';
-import { Icondiv } from './components/Icondiv';
-import { Fromto } from './components/Fromto';
-import { Fare } from './components/Fare';
-import { Wrap } from './components/Wrap';
+import Home from './Pages/Home/Home';
+import List from './Pages/List/List';
+import Hotel from './Pages/Hotel/Hotel';
+import Main from './Main';
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
+
 function App() {
+
   
   return (
-    <div className="App">
-      <Navbar />
-      <Wrap>
-        {/* <Icondiv className="icondiv"></Icondiv> */}
-        <br />
-        <br />
-        <Bookingcss>
-          <br />
-
-          <Fromto />
-          <Fare />
-        </Bookingcss>
-        <div className="button">
-          <button>SEARCH</button>
-        </div>
-      </Wrap>
-      <Block />
-      <div className={styles.container} style={{ boxSizing: "border-box" }}>
-        <Slider />
-        <div style={{ marginTop: 50 }}>
-          <Carousel />
-        </div>
-      </div>
-    </div>
+    <>
+     <BrowserRouter>
+      <Routes>
+        <Route path='/' element ={<Main/>}/>
+        <Route path="/hotel" element={<Home/>} />
+        <Route path="/hotels" element={<List />} />
+        <Route path="/hotels/:id" element={<Hotel />} />
+      </Routes>
+    </BrowserRouter>
+ 
+    </>
   );
 }
 
