@@ -1,5 +1,5 @@
 .header{
-    height: 400px;
+    height: 120px;
     background: linear-gradient(
       to top,
       #0e26ac 0%,
@@ -16,12 +16,12 @@
 
 .headerContainer{
     width: 100%;
-    max-width: 1040px;
-    margin: 20px 0px 100px 0px;
+    max-width: 1080px;
+    margin: 10px 0px 100px 0px;
 
 }
 .headerContainer.listMode{
-    margin: 20px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
 }
 .headerList{
     display: flex;
@@ -63,28 +63,31 @@
 }
 .headerSearch{
     height: 100px;
-    background-color: #fff;
-    border: 3px solid rgb(182, 18, 18);
+    /* background-color: #fff; */
+    /* border: 3px solid rgba(16, 16, 16, 0.205); */
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 10px 0px;
-    border-radius: 5px;
+    border-radius: 10px;
     position: absolute;
-    bottom: -50px;
+    /* bottom: -50px; */
     width: 100%;
     max-width: 1024px;
 
 }
 
 .headerIcon{
-    color: black;
+    color: rgb(63, 60, 60);
 }
 
 .headerSearchItem{
     display: flex;
     align-items: center;
     gap: 14px;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px;
 }
 .headerSearchInput{
     border: none;
@@ -92,7 +95,7 @@
     font-size: large;
 }
 .headerSearchText{
-    color: black;
+    color: rgb(91, 90, 90);
 }
 .date{
     position: absolute;
@@ -135,4 +138,17 @@ box-shadow: 3px 3px 5px 0px rgba(214,214,214,0.47);
     cursor:not-allowed;
     color: grey;
     border-color:gray ;
+}
+
+.offerHeader{
+    /* height: 20px; */
+    width: 100vw;
+    background-color: rgb(184, 43, 43);
+  color: white;
+  
+
+}
+.LearnMoreBtn{
+    /* background-color:none; */
+    border: none;
 }
