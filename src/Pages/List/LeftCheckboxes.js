@@ -39,14 +39,14 @@ const LeftCheckboxes = () => {
         <h6 className="text-muted fw-bold">Property Types</h6>
         <Checkboxes checkboxTexts={checkboxTextsPropertyType} />
       </div>
-      <div className="row border-2 border-bottom p-2">
+      <div className="row border-2 text-left border-bottom p-2">
       <h6 className="text-muted fw-bold">Ratings</h6>
-      <ul className="list-group list-group-flush">
+      <ul className="list-group list-group-flush text-left">
         {checkboxItems.map((item, index) => (
-          <li key={index} className={`list-group-item StarRating-${item.rating}`}>
+          <li key={index} className={`list-group-item text-left StarRating-${item.rating}`}>
             <div className="form-check">
               <input className="form-check-input" type="checkbox" id={`checkbox-${index}`} />
-              <label className="form-check-label" htmlFor={`checkbox-${index}`}>
+              <label className="form-check-label text-left" htmlFor={`checkbox-${index}`}>
               {Array(item.rating)
         .fill()
         .map((_, index) => (

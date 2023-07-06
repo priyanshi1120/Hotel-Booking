@@ -7,7 +7,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 const StarRating = ({ rating }) => {
   const stars = [];
   for (let i = 0; i < rating; i++) {
-    stars.push(<FontAwesomeIcon key={i} icon={faStar} />);
+    stars.push(<FontAwesomeIcon key={i} icon={faStar} style={{ color: 'yellow' }}  />);
   }
 
   return <div>{stars}</div>;
